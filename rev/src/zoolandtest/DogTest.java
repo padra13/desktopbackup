@@ -14,7 +14,7 @@ import zooland.Animals;
  * @author padra
  *
  */
-class CatTest extends Animals {
+class DogTest extends Animals {
 
 	/**
 	 * @throws java.lang.Exception
@@ -28,9 +28,4 @@ class CatTest extends Animals {
 		fail("Not yet implemented");
 	}
 
-
-	
-	
-	
-	
 }
