@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package zooland;
+
+/**
+ * @author padra
+ *
+ */
+public class Cat extends Animals {
+
+	/**
+	 * @param name
+	 * @param age
+	 */
+	public Cat(String name, int age) {
+		super(name, age);
+		// TODO Auto-generated constructor stub
+	}
+
+}

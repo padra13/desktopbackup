@@ -1,0 +1,55 @@
+/**
+ * 
+ */
+package zoolandtest;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+/**
+ * @author padra
+ *
+ */
+class AnimalsTest {
+
+	String validNameLower,validNameUpper,invalidNameLower,invalidNameUpper;
+	
+	int validAgeLower,validAgeUpper,invalidAgeLower,invalidAgeUpper;
+	
+	
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@BeforeEach
+	void setUp() throws Exception {
+	
+		validNameLower="a";
+		validNameUpper="valid Name";
+		invalidNameLower="";
+		invalidNameUpper="asdfghjklqwertyuiopzx";
+	
+		System.out.println(invalidNameUpper.length());
+	}
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+	
+	@Test
+	void testValidName() {
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+}

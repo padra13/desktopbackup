@@ -1,0 +1,44 @@
+/**
+ * 
+ */
+package rev;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+/**
+ * @author padra
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Hello World");
+
+		Person P1 = new Person();
+
+		P1.setName("Miranda");
+		P1.setAge(20);
+
+		System.out.println(P1.toString());
+
+		listOfPersons();
+
+	}
+
+	public static void listOfPersons() {
+
+	}
+
+	public static List addToList() {
+
+		return null;
+
+	}
+
+}

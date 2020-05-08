@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="rev.Person"/>
+<fullyQualifiedTypeName name="java.lang.IllegalAccessError"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="zooland.Cat"/>
+<fullyQualifiedTypeName name="zooland.CatBreed"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="zooland.Dog"/>
+<fullyQualifiedTypeName name="zooland.DogBreed"/>
+<fullyQualifiedTypeName name="zooland.Animals"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+</qualifiedTypeNameHistroy>

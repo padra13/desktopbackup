@@ -1,0 +1,81 @@
+/**
+ * 
+ */
+package zooland;
+
+
+import java.util.*;
+/**
+ * @author padra
+ *
+ */
+public class PetShop {
+
+	private final static Scanner sc = new Scanner(System.in);
+	
+	public static String userIn="";
+
+	public final static Random rand = new Random();
+	
+	public static int petid;
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		Cat c = new Cat("Felix", 1, CatBreed.MAINECOON);
+		
+		Dog d = new Dog("Fido", 3, DogBreed.GREATDANE);
+		
+		
+		System.out.println(c.toString());
+		
+		System.out.println(d.toString());
+		
+		
+		System.out.println("DO you want to add a record? (y/n)");
+		
+		userIn = sc.next();
+		
+		
+		//generate a randomID for pet
+		
+		petid = rand.nextInt(999999);
+		
+		System.out.println(petid);
+		
+		if(userIn.equalsIgnoreCase("y")) {
+			addANewAnimal();
+		}
+		
+		
+	}
+
+	
+	public static void addANewAnimal() {
+		
+		System.out.println("What animal to you want to add?");
+
+		userIn = sc.next();
+		
+		switch (userIn) {
+		case "cat":
+			System.out.println("You choose a cat");
+			break;
+		case "dog":
+			System.out.println("You choose a dog");
+			break;
+
+		default:
+			System.err.println("Error, please try again");
+			
+			break;
+		}
+		
+	}
+	
+	
+}

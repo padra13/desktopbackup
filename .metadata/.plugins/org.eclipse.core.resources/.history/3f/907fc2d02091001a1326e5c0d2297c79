@@ -1,0 +1,110 @@
+/**
+ * 
+ */
+package zooland;
+
+
+import java.util.*;
+/**
+ * @author padra
+ *
+ */
+public class PetShop {
+
+	private final static Scanner sc = new Scanner(System.in);
+	
+	public static String userIn="";
+
+	public final static Random rand = new Random();
+	
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		Cat c = new Cat("Felix", 1, CatBreed.MAINECOON);
+		
+		Dog d = new Dog("Fido", 3, DogBreed.GREATDANE);
+		
+		
+		System.out.println(c.toString());
+		
+		System.out.println(d.toString());
+		
+		
+		System.out.println("DO you want to add a record? (y/n)");
+		
+		userIn = sc.next();
+		
+		
+		
+		if(userIn.equalsIgnoreCase("y")) {
+			
+			//generate a randomID for pet
+			int cataloguenum = rand.nextInt(999999);
+			
+			addANewAnimal();
+		}
+		
+	
+		Animals cataloguenum = addANewAnimal();
+		
+		
+		System.out.println(cataloguenum);
+		
+		
+		
+	}
+
+	public static void addToList() {
+		
+		
+		
+	}
+	
+	
+	
+	public static Animals addANewAnimal() {
+		
+		System.out.println("What animal to you want to add?");
+
+		userIn = sc.next();
+
+		
+		
+		switch (userIn) {
+		case "cat":
+			System.out.println("You choose a cat");
+			
+			System.out.println("Enter a name");
+			String name = sc.next();
+			System.out.println("Enter age");
+			int age = sc.nextInt();
+			System.out.println("Enter Breed");
+			CatBreed breed = CatBreed.MAINECOON;
+			
+			Cat c = new Cat(name,age,breed);
+			
+			System.out.println("You created ... ");
+			System.out.println(c.toString());
+			
+			return c;
+			
+			
+		case "dog":
+			System.out.println("You choose a dog");
+			break;
+
+		default:
+			System.err.println("Error, please try again");
+			
+			break;
+		}
+		
+	}
+	
+	
+}

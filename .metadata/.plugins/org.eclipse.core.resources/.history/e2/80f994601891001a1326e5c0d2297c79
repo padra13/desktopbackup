@@ -1,0 +1,97 @@
+/**
+ * 
+ */
+package rev;
+
+import java.util.*;
+
+/**
+ * @author padra
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Hello World");
+
+		Person P1 = new Person();
+
+		P1.setName("Miranda");
+		P1.setAge(20);
+		P1.setAlive(true);
+
+		Person P2 = new Person();
+
+		P2.setName("Sheldon");
+		P2.setAge(30);
+
+		
+		
+		createNewPerson();
+		
+		
+		// System.out.println(P1.toString());
+
+		List<Person> plist = new ArrayList<Person>();
+
+		plist.add(P1);
+		plist.add(P2);
+
+		listOfPersons(plist);
+
+	}
+
+	public static void listOfPersons(List<Person> list) {
+
+		for (Person p : list) {
+
+			if (p.isAlive()) {
+				System.out.println(p);
+
+			}
+
+		}
+
+	}
+
+	public static void addToList(List<Person> list) {
+
+	}
+
+	public static Person createNewPerson() {
+
+		Scanner sc = new Scanner(System.in);
+		Person newPerson = new Person();
+
+		String userIn = sc.next();
+
+		System.out.println("Create a new Person? (Y/N)");
+
+		if (userIn.equalsIgnoreCase("y")) {
+
+			System.out.println("Enter a name");
+			userIn = sc.next();
+			newPerson.setName(userIn);
+
+			System.out.println("Enter age");
+			userIn = sc.next();
+			newPerson.setAge(Integer.parseInt(userIn));
+
+			return newPerson;
+		}
+
+		else {
+		
+			System.out.println("You choose no, not creating a new person..");	
+			return null;
+	
+		}
+
+	}
+
+}

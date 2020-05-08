@@ -1,0 +1,60 @@
+/**
+ * 
+ */
+package rev;
+
+import java.util.*;
+
+/**
+ * @author padra
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Hello World");
+
+		Person P1 = new Person();
+
+		P1.setName("Miranda");
+		P1.setAge(20);
+
+		Person P2 = new Person();
+
+		P2.setName("Sheldon");
+		P2.setAge(30);
+
+		// System.out.println(P1.toString());
+
+		List<Person> plist = new ArrayList<Person>();
+
+		plist.add(P1);
+		plist.add(P2);
+
+		listOfPersons(plist);
+
+	}
+
+	public static void listOfPersons(List<Person> list) {
+
+		for (Person p : list) {
+
+			if (p.isAlive()) {
+				System.out.println(p);
+
+			}
+
+		}
+
+	}
+
+	public static void addToList(List<Person> list) {
+
+	}
+
+}

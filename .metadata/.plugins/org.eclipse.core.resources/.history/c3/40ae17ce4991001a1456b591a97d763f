@@ -1,0 +1,134 @@
+/**
+ * 
+ */
+package zoolandtest;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import zooland.Animals;
+
+/**
+ * @author padra
+ *
+ */
+class AnimalsTest {
+
+	String validNameLower,validNameUpper,invalidNameLower,invalidNameUpper;
+	
+	int validAgeLower,validAgeUpper,invalidAgeLower,invalidAgeUpper;
+	
+	Animals animal;
+	
+	
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@BeforeEach
+	void setUp() throws Exception {
+	
+		validNameLower="a";
+		validNameUpper="valid Name";
+		invalidNameLower="";
+		invalidNameUpper="asdfghjklqwertyuiopzx";
+	
+		validAgeLower=1;
+		validAgeUpper=20;
+		invalidAgeLower=0;
+		invalidAgeUpper=21;
+		
+		
+		animal = new Animals();
+		
+		
+		
+		
+		
+	}
+	
+	@Test
+	void testValidName() {
+
+		animal.setName(validNameLower);
+	
+		assertEquals(animal.getName(), validNameLower);
+		
+		animal.setName(validNameUpper);
+		
+		assertEquals(animal.getName(), validNameUpper);
+		
+	}
+	
+	@Test
+	void testInvalidName() {
+		
+	assertThrows(IllegalArgumentException.class,() ->{
+
+		animal.setName(invalidNameLower);
+		
+	});
+		
+	
+	assertThrows(IllegalArgumentException.class,() ->{
+
+		animal.setName(invalidNameUpper);
+		
+	});
+			
+	}
+	
+	
+	@Test
+	void testValidAges() {
+		
+		animal.setAge(validAgeLower);
+		
+		assertEquals(animal.getAge(), validAgeLower);
+	
+		animal.setAge(validAgeUpper);
+		
+		assertEquals(animal.getAge(), validAgeUpper);
+		
+		
+	}
+	
+	
+	
+	@Test
+	void testInvalidAges() {
+	
+		
+		assertThrows(IllegalArgumentException.class, ()->{
+			
+			animal.setAge(invalidAgeLower);
+			
+		});
+		
+		
+		assertThrows(IllegalArgumentException.class, ()->{
+			animal.setAge(invalidAgeUpper);
+		});
+		
+		
+	}
+	
+	
+	@Test
+	void validConstructor() {
+		
+		Animals newAnimal =  new Animals(validNameLower, validAgeLower);
+		
+		assertEquals(newAnimal.getName(), validNameLower);
+		
+		assertEquals(newAnimal.getAge(), validAgeLower);
+		
+		
+		
+	}
+	
+	
+	
+	
+}

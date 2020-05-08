@@ -1,0 +1,5 @@
+package zooland;
+
+public enum CatBreed {
+
+}

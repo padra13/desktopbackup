@@ -1,0 +1,59 @@
+/**
+ * 
+ */
+package zooland;
+
+/**
+ * @author padra
+ *
+ */
+public class Dog extends Animals {
+
+	private DogBreed breed;	
+	
+	
+	/**
+	 * @param name
+	 * @param age
+	 */
+	public Dog(String name, int age,DogBreed breed) {
+		super();
+		// TODO Auto-generated constructor stub
+		this.setBreed(breed);
+	}
+
+
+	/**
+	 * @return the breed
+	 */
+	public DogBreed getBreed() {
+		return breed;
+	}
+
+
+	/**
+	 * @param breed the breed to set
+	 */
+	public void setBreed(DogBreed breed) {
+		this.breed = breed;
+	}
+
+
+	@Override
+	public void makeSound() {
+		// TODO Auto-generated method stub
+		super.makeSound();
+	}
+
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "DOG: "+ super.toString()+"breed=" + this.getBreed();
+	}
+
+	
+	
+	
+	
+}
